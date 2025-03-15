@@ -1,22 +1,29 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Base typography */
 body {
     background-color: white;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Simple title styling since we're not overriding Tailwind anymore */
+/* Refined title styling */
 .timeline-title {
     font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 2rem 0;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    text-align: left;
+    margin: 1.5rem 2rem;
+    color: #1a1a1a;
 }
 
 /* Ensure timeline takes full width and height */
 .timeline-container {
     position: relative;
-    margin: 0 !important; /* Removed top and bottom margins */
+    margin: 0 !important;
     max-width: 100% !important;
     padding: 0 !important;
-    height: 100vh; /* Adjusted height since we removed margins */
+    height: calc(100vh - 100px); /* Account for title margin (3rem total) */
     width: 100vw !important;
     background-color: white;
 }
@@ -101,7 +108,7 @@ body {
     right: 0;
     top: 40px;
     height: 2px;
-    background-color: #e5e7eb;
+    background-color: #059669; /* emerald-600 */
     z-index: 5;
     width: 100%; /* Ensure full width */
 }
@@ -122,9 +129,10 @@ body {
 .year-marker {
     position: absolute;
     transform: translateX(-50%);
-    color: #6b7280;
-    font-size: 0.875rem;
     font-weight: 500;
+    color: #059669; /* emerald-600 to match date label */
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
 }
 
 /* Event items */
@@ -138,28 +146,28 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    --track-height: calc((100vh - 60px) * 0.5); /* Define track height as CSS variable */
+    --track-height: calc((100vh - 160px) * 0.5); /* Account for title (100px) and header (60px) */
     height: var(--track-height);
-    z-index: 2; /* Above header */
+    z-index: 2;
 }
 
 #models-timeline {
-    top: 60px; /* Start below header */
-    background-color: rgba(191, 219, 254, 0.8); /* More saturated blue */
+    top: 60px;
+    background-color: rgba(5, 150, 105, 0.1); /* emerald-600 with low opacity */
 }
 
 #concepts-timeline {
-    top: calc(60px + (100vh - 60px) * 0.5); /* Position exactly halfway */
-    background-color: rgba(226, 232, 240, 0.8); /* More distinct gray */
+    top: calc(60px + var(--track-height)); /* Use track height variable */
+    background-color: rgba(248, 248, 246, 0.8);
 }
 
 /* Card positioning */
 .models-item {
-    top: 100px; /* Position in first track */
+    top: 80px; /* Reduced from 100px */
 }
 
 .concepts-item {
-    top: 100px; /* Position in second track (relative to track) */
+    top: 80px; /* Reduced from 100px */
 }
 
 /* Common dot styling */
@@ -167,7 +175,7 @@ body {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #3b82f6;
+    background-color: #059669; /* emerald-600 */
     border-radius: 50%;
     left: 50%;
     transform: translateX(-50%);
@@ -188,7 +196,7 @@ body {
 .timeline-vertical-line {
     position: absolute;
     width: 2px;
-    background-color: #e5e7eb;
+    background-color: #e5e7eb; /* Changed back to gray */
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -196,13 +204,13 @@ body {
 
 /* Connect lines to timeline for both tracks */
 #models-timeline .timeline-vertical-line {
-    top: -20px; /* Start from timeline */
-    height: 120px; /* Extend to card */
+    top: -20px;
+    height: 100px; /* Reduced from 120px */
 }
 
 #concepts-timeline .timeline-vertical-line {
-    top: calc(-50vh + 16px); /* Start from timeline */
-    height: calc(50vh + 80px); /* Extend to card */
+    top: calc(-1 * var(--track-height) - 24px); /* Align with dot position */
+    height: calc(var(--track-height) + 104px); /* Height to reach from timeline to card */
 }
 
 /* Card styling */
@@ -220,26 +228,33 @@ body {
 
 /* Card content */
 .date-label {
-    color: #6b7280;
+    color: #059669; /* emerald-600 */
     font-size: 0.875rem;
-    margin-bottom: 4px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
 .event-title {
-    font-weight: bold;
-    font-size: 1.125rem;
-    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    line-height: 1.3;
+    color: #1a1a1a;
 }
 
 .description {
     color: #4b5563;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.timeline-datetime {
+    color: #6B7280; /* Medium gray color, you can adjust this */
     font-size: 0.875rem;
-    line-height: 1.4;
-    max-height: 4.2em;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    margin-bottom: 0.5rem;
 }
 
 /* Hover effect */
@@ -270,7 +285,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #3b82f6;
+    color: #059669; /* emerald-600 */
     transition: transform 0.2s;
     z-index: 100;
 }
@@ -357,7 +372,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #3b82f6;
+    color: #059669; /* emerald-600 */
     transition: transform 0.2s;
     z-index: 100;
 }
