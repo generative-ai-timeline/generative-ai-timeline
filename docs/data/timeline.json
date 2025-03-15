@@ -298,6 +298,13 @@
             "description": "The release of Cohere Rerank 3 introduces advanced reranking techniques that re-order retrieved documents by relevance, substantially boosting the precision of RAG systems."
           },
           {
+            "date": "2024-11-25",
+            "time": "November 25, 2024 (approx.)",
+            "event": "Model Context Protocol (MCP) Introduced",
+            "origin": "Anthropic",
+            "description": "Anthropic released MCP as an open standard to connect AI models with various data sources and tools. This protocol simplifies integration and enables AI agents to access up-to-date, context-rich information, fostering the development of more autonomous, agentic AI systems."
+          },
+          {
             "date": "2024-12-16",
             "time": "December 16, 2024",
             "event": "Agentic RAG with Dynamic Knowledge Base Selection Demonstrated",
