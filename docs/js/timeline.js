@@ -44,8 +44,10 @@ async function loadTimeline() {
         container.innerHTML = `
             <div class="timeline-scroll-container">
                 <div class="timeline-content">
-                    <div class="timeline-years"></div>
-                    <div class="timeline-center-line"></div>
+                    <div class="timeline-header">
+                        <div class="timeline-years"></div>
+                        <div class="timeline-center-line"></div>
+                    </div>
                     <div id="models-timeline"></div>
                     <div id="concepts-timeline"></div>
                 </div>
@@ -57,21 +59,25 @@ async function loadTimeline() {
         const minSpacing = 40; // Minimum space between cards
         
         // Calculate total width based on number of events and minimum spacing
-        let totalWidth = 400; // Initial padding
+        let totalWidth = 300; // Initial padding
         Object.values(eventsByYear).forEach(events => {
             // Add width for each year based on number of events
             totalWidth += Math.max(
                 events.length * (minCardWidth + minSpacing),
-                400 // Minimum year width
+                300 // Minimum year width
             );
         });
         
-        document.querySelector('.timeline-content').style.width = `${totalWidth}px`;
+        // Set the width for both timeline content and center line
+        const timelineContent = document.querySelector('.timeline-content');
+        timelineContent.style.width = `${totalWidth}px`;
+        const timelineCenterLine = document.querySelector('.timeline-center-line');
+        timelineCenterLine.style.width = `${totalWidth}px`;
         
         // Calculate year positions based on event density
         const startYear = Math.min(...Object.keys(eventsByYear));
         const endYear = Math.max(...Object.keys(eventsByYear));
-        let currentPosition = 200; // Start with left padding
+        let currentPosition = 150; // Increased from 100 to center first card
         
         // Add year markers
         const yearsContainer = document.querySelector('.timeline-years');
@@ -80,7 +86,7 @@ async function loadTimeline() {
             const events = eventsByYear[year] || [];
             const yearWidth = Math.max(
                 events.length * (minCardWidth + minSpacing),
-                400 // Minimum year width
+                300 // Keep minimum year width
             );
             
             // Add year marker
@@ -101,6 +107,20 @@ async function loadTimeline() {
             
             currentPosition += yearWidth;
         }
+        
+        // Get scroll container
+        const scrollContainer = document.querySelector('.timeline-scroll-container');
+        
+        // Wait for next frame to ensure content is rendered
+        requestAnimationFrame(() => {
+            // Scroll to the right end
+            scrollContainer.scrollLeft = scrollContainer.scrollWidth;
+            
+            // Add scroll event listener
+            scrollContainer.addEventListener('scroll', handleScroll);
+            // Initial check
+            handleScroll({ target: scrollContainer });
+        });
         
     } catch (error) {
         console.error('Error loading timeline:', error);
@@ -142,6 +162,15 @@ function renderTimelineItem(item, position) {
     itemContainer.appendChild(line);
     
     container.appendChild(itemContainer);
+}
+
+function handleScroll(event) {
+    const container = event.target;
+    const isAtStart = container.scrollLeft <= 0;
+    const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth;
+    
+    container.classList.toggle('at-start', isAtStart);
+    container.classList.toggle('at-end', isAtEnd);
 }
 
 document.addEventListener('DOMContentLoaded', loadTimeline);

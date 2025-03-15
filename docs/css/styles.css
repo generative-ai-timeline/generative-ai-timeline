@@ -1,9 +1,24 @@
+body {
+    background-color: white;
+}
+
+/* Simple title styling since we're not overriding Tailwind anymore */
+.timeline-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Ensure timeline takes full width and height */
 .timeline-container {
     position: relative;
-    margin: 20px auto;
-    max-width: 1200px;
-    padding: 20px;
-    height: 600px;
+    margin: 0 !important; /* Removed top and bottom margins */
+    max-width: 100% !important;
+    padding: 0 !important;
+    height: 100vh; /* Adjusted height since we removed margins */
+    width: 100vw !important;
+    background-color: white;
 }
 
 .timeline-scroll-container {
@@ -11,22 +26,62 @@
     width: 100%;
     height: 100%;
     overflow-x: auto;
+    padding: 10px 0;
 }
 
-.timeline-content {
-    position: relative;
-    min-width: max-content;
-    padding: 0 200px;
+/* Add fade effect containers */
+.timeline-scroll-container::before,
+.timeline-scroll-container::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    pointer-events: none; /* Allow clicking through the fade */
+    z-index: 9;
 }
 
-/* Timeline base */
-.timeline-center-line {
+/* Left fade */
+.timeline-scroll-container::before {
+    left: 0;
+    width: 30px; /* Reduced from 50px to show more of first card */
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.8) 0%, /* Reduced opacity */
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+/* Right fade */
+.timeline-scroll-container::after {
+    right: 0;
+    width: 30px; /* Reduced from 50px */
+    background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.8) 0%, /* Reduced opacity */
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+/* Hide fade effect when scrolled to the respective end */
+.timeline-scroll-container.at-start::before {
+    display: none;
+}
+
+.timeline-scroll-container.at-end::after {
+    display: none;
+}
+
+/* Timeline header section */
+.timeline-header {
     position: absolute;
     left: 0;
     right: 0;
-    top: 40px;
-    height: 1px;
-    background-color: #e5e7eb;
+    top: 0;
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 1; /* Lower z-index so dots and lines can show through */
 }
 
 /* Year labels */
@@ -35,6 +90,33 @@
     left: 0;
     right: 0;
     top: 10px;
+    z-index: 6;
+    width: 100%; /* Ensure full width */
+}
+
+/* Timeline base */
+.timeline-center-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    height: 2px;
+    background-color: #e5e7eb;
+    z-index: 5;
+    width: 100%; /* Ensure full width */
+}
+
+/* Remove the duplicate line container */
+.timeline-line-container {
+    display: none;
+}
+
+/* Update content container */
+.timeline-content {
+    position: relative;
+    min-width: max-content;
+    padding: 0;
+    height: 100%;
 }
 
 .year-marker {
@@ -51,26 +133,76 @@
     transform: translateX(-50%);
 }
 
-/* The blue dot */
+/* Track containers - bottom layer */
+#models-timeline, #concepts-timeline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    --track-height: calc((100vh - 60px) * 0.5); /* Define track height as CSS variable */
+    height: var(--track-height);
+    z-index: 2; /* Above header */
+}
+
+#models-timeline {
+    top: 60px; /* Start below header */
+    background-color: rgba(239, 246, 255, 0.7);
+}
+
+#concepts-timeline {
+    top: calc(60px + (100vh - 60px) * 0.5); /* Position exactly halfway */
+    background-color: rgba(243, 244, 246, 0.7);
+}
+
+/* Card positioning */
+.models-item {
+    top: 100px; /* Position in first track */
+}
+
+.concepts-item {
+    top: 100px; /* Position in second track (relative to track) */
+}
+
+/* Common dot styling */
 .timeline-dot {
     position: absolute;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background-color: #3b82f6;
     border-radius: 50%;
     left: 50%;
-    top: 37px; /* Align with timeline */
     transform: translateX(-50%);
+    z-index: 7;
+    top: -24px; /* Default position for models track */
 }
 
-/* Vertical line */
+/* Position dots on timeline for both tracks */
+#models-timeline .timeline-dot {
+    /* top: -20px; Already set in common styling */
+}
+
+#concepts-timeline .timeline-dot {
+    top: calc(-1 * var(--track-height) - 24px); --Use track height variable */
+}
+
+/* Common line styling */
 .timeline-vertical-line {
     position: absolute;
-    width: 1px;
+    width: 2px;
     background-color: #e5e7eb;
     left: 50%;
     transform: translateX(-50%);
-    top: 44px; /* Start below dot */
+    z-index: 2;
+}
+
+/* Connect lines to timeline for both tracks */
+#models-timeline .timeline-vertical-line {
+    top: -20px; /* Start from timeline */
+    height: 120px; /* Extend to card */
+}
+
+#concepts-timeline .timeline-vertical-line {
+    top: calc(-50vh + 16px); /* Start from timeline */
+    height: calc(50vh + 80px); /* Extend to card */
 }
 
 /* Card styling */
@@ -83,23 +215,7 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     left: 50%;
     transform: translateX(-50%);
-}
-
-/* Position cards in alternating rows below timeline */
-.models-item {
-    top: 80px; /* First row */
-}
-
-.models-item + .timeline-vertical-line {
-    height: 40px;
-}
-
-.concepts-item {
-    top: 240px; /* Second row */
-}
-
-.concepts-item + .timeline-vertical-line {
-    height: 200px;
+    z-index: 3;
 }
 
 /* Card content */
@@ -130,7 +246,7 @@
 .timeline-item:hover {
     transform: translateX(-50%) scale(1.02);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
+    z-index: 8;
 }
 
 @media (max-width: 768px) {
