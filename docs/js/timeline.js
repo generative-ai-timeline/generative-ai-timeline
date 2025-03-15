@@ -149,11 +149,29 @@ function renderTimelineItem(item, position) {
     // Create card
     const card = document.createElement('div');
     card.className = `timeline-item ${item.type === 'model' ? 'models-item' : 'concepts-item'}`;
-    card.innerHTML = `
-        <div class="date-label">${item.time}</div>
-        <div class="event-title">${item.event}</div>
-        <div class="description">${item.description}</div>
-    `;
+    
+    // Different card content based on type
+    if (item.type === 'model') {
+        card.innerHTML = `
+            <div class="date-label">${item.time}</div>
+            <div class="event-title">${item.event}</div>
+            <div class="model-info">
+                <span class="provider">By ${item.provider || 'Unknown Provider'}</span>
+                ${item.model ? `<span class="model-name">${item.model}</span>` : ''}
+            </div>
+            <div class="description">${item.description}</div>
+        `;
+    } else {
+        card.innerHTML = `
+            <div class="date-label">${item.time}</div>
+            <div class="event-title">${item.event}</div>
+            <div class="origin-info">
+                <span class="origin">Origin: ${item.origin || 'Various Sources'}</span>
+            </div>
+            <div class="description">${item.description}</div>
+        `;
+    }
+    
     itemContainer.appendChild(card);
     
     // Create vertical line

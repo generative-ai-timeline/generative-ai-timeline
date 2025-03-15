@@ -9,7 +9,7 @@
             "event": "GPT‑1 Released",
             "model": "GPT‑1",
             "provider": "OpenAI",
-            "description": "OpenAI releases GPT‑1, the first generative pre‑trained transformer model that sparked modern LLM research."
+            "description": "OpenAI releases GPT‑1, the first generative pre‑trained transformer model that sparked modern LLM development."
           },
           {
             "date": "2019-02-01",
@@ -65,7 +65,7 @@
             "event": "Grok‑1 Released",
             "model": "Grok‑1",
             "provider": "xAI",
-            "description": "Elon Musk’s xAI launches Grok‑1, a 314-billion-parameter model integrated with the social platform X (formerly Twitter)."
+            "description": "Elon Musk's xAI launches Grok‑1, a 314-billion-parameter model integrated with the social platform X (formerly Twitter)."
           },
           {
             "date": "2023-11-07",
@@ -121,7 +121,7 @@
             "event": "GPT‑4o mini Released",
             "model": "GPT‑4o mini",
             "provider": "OpenAI",
-            "description": "OpenAI releases GPT‑4o mini, a smaller, faster, and more cost-efficient variant that replaces GPT‑3.5 in ChatGPT’s interface."
+            "description": "OpenAI releases GPT‑4o mini, a smaller, faster, and more cost-efficient variant that replaces GPT‑3.5 in ChatGPT's interface."
           },
           {
             "date": "2024-08-14",
@@ -129,7 +129,7 @@
             "event": "Grok‑2 Released",
             "model": "Grok‑2",
             "provider": "xAI",
-            "description": "xAI launches Grok‑2, refining Grok‑1’s performance and efficiency, available to premium subscribers on X."
+            "description": "xAI launches Grok‑2, refining Grok‑1's performance and efficiency, available to premium subscribers on X."
           },
           {
             "date": "2024-09-15",
@@ -183,7 +183,7 @@
             "time": "Early 2018 (approx.)",
             "event": "Knowledge Distillation & Model Compression",
             "origin": "Academic / Industry (e.g., Hugging Face)",
-            "description": "Techniques for compressing large transformer models into smaller, efficient variants (e.g., DistilBERT) are popularized, enabling faster inference and reducing resource consumption."
+            "description": "Techniques for compressing large transformer models into smaller, efficient variants (e.g., DistilBERT) are developed."
           },
           {
             "date": "2018-01-01",

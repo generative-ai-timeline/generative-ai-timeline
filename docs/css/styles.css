@@ -224,6 +224,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Card content */
@@ -249,6 +250,17 @@ body {
     font-size: 0.9375rem;
     line-height: 1.5;
     font-weight: 400;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Show description on hover */
+.timeline-item:hover .description {
+    height: auto;
+    opacity: 1;
+    margin-top: 8px;
 }
 
 .timeline-datetime {
@@ -257,9 +269,9 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Hover effect */
+/* Hover effect - move up significantly */
 .timeline-item:hover {
-    transform: translateX(-50%) scale(1.02);
+    transform: translateX(-50%) translateY(-48px); /* Increased from -24px to -48px */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 8;
 }
@@ -383,4 +395,36 @@ body {
 
 .scroll-button:active {
     transform: scale(0.95);
+}
+
+/* Model info styling */
+.model-info {
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+.model-info .provider {
+    color: #059669; /* emerald-600 */
+    font-weight: 500;
+}
+
+.model-info .model-name {
+    margin-left: 8px;
+    padding: 2px 6px;
+    background-color: rgba(5, 150, 105, 0.1);
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* Origin info styling */
+.origin-info {
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+.origin-info .origin {
+    color: #059669; /* emerald-600 */
+    font-weight: 500;
 }
