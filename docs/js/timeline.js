@@ -1,7 +1,27 @@
 async function loadTimeline() {
     try {
-        const response = await fetch('../data/timeline.json');
+        console.log('Fetching timeline data...');
+        
+        // Determine if we're on GitHub Pages
+        const isGitHubPages = window.location.hostname.includes('github.io');
+        // Use relative path for local, absolute path for GitHub Pages
+        const dataPath = isGitHubPages 
+            ? '/generative-ai-timeline/data/timeline.json' 
+            : 'data/timeline.json';
+            
+        const response = await fetch(dataPath);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
         const data = await response.json();
+        console.log('Timeline data loaded:', data);
+        
+        // Check if data has the expected structure
+        if (!data.models || !data.concepts) {
+            throw new Error('Invalid data structure in timeline.json');
+        }
         
         // Get all items and sort them by date
         const allItems = [
@@ -84,6 +104,10 @@ async function loadTimeline() {
         
     } catch (error) {
         console.error('Error loading timeline:', error);
+        const container = document.querySelector('.timeline-container');
+        if (container) {
+            container.innerHTML = `<div class="error-message">Failed to load timeline data: ${error.message}</div>`;
+        }
     }
 }
 
