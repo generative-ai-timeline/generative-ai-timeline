@@ -145,12 +145,12 @@ body {
 
 #models-timeline {
     top: 60px; /* Start below header */
-    background-color: rgba(239, 246, 255, 0.7);
+    background-color: rgba(191, 219, 254, 0.8); /* More saturated blue */
 }
 
 #concepts-timeline {
     top: calc(60px + (100vh - 60px) * 0.5); /* Position exactly halfway */
-    background-color: rgba(243, 244, 246, 0.7);
+    background-color: rgba(226, 232, 240, 0.8); /* More distinct gray */
 }
 
 /* Card positioning */
@@ -181,7 +181,7 @@ body {
 }
 
 #concepts-timeline .timeline-dot {
-    top: calc(-1 * var(--track-height) - 24px); --Use track height variable */
+    top: calc(-1 * var(--track-height) - 24px); /* Use track height variable */
 }
 
 /* Common line styling */
@@ -340,4 +340,32 @@ body {
 
 .close-button:hover {
     color: #000;
+}
+
+/* Scroll Left Button */
+.scroll-button {
+    position: fixed;
+    top: calc(60px + 132px); /* Header height (60px) + offset from track top */
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b82f6;
+    transition: transform 0.2s;
+    z-index: 100;
+}
+
+.scroll-button:hover {
+    transform: scale(1.1);
+}
+
+.scroll-button:active {
+    transform: scale(0.95);
 }

@@ -175,8 +175,9 @@ function handleScroll(event) {
 
 document.addEventListener('DOMContentLoaded', loadTimeline);
 
-// Modal functionality
+// Modal and scroll button functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Modal functionality
     const infoButton = document.getElementById('infoButton');
     const modal = document.getElementById('infoModal');
     const closeButton = document.getElementById('closeModal');
@@ -192,6 +193,20 @@ document.addEventListener('DOMContentLoaded', function() {
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.classList.add('hidden');
+        }
+    });
+
+    // Scroll button functionality
+    const scrollLeftButton = document.getElementById('scrollLeftButton');
+    
+    // Add click handler that finds the scroll container each time
+    scrollLeftButton.addEventListener('click', () => {
+        const scrollContainer = document.querySelector('.timeline-scroll-container');
+        if (scrollContainer) {
+            scrollContainer.scrollBy({
+                left: -600,
+                behavior: 'smooth'
+            });
         }
     });
 });
