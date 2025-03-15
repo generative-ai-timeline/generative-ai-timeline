@@ -174,3 +174,24 @@ function handleScroll(event) {
 }
 
 document.addEventListener('DOMContentLoaded', loadTimeline);
+
+// Modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const infoButton = document.getElementById('infoButton');
+    const modal = document.getElementById('infoModal');
+    const closeButton = document.getElementById('closeModal');
+
+    infoButton.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+    });
+
+    closeButton.addEventListener('click', () => {
+        modal.classList.add('hidden');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+});

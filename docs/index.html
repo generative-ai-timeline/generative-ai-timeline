@@ -39,6 +39,26 @@
         <h1 class="timeline-title">Generative Artificial Intelligence Timeline</h1>
         <div class="timeline-container"></div>
     </div>
+
+    <!-- Floating Info Button -->
+    <button id="infoButton" class="info-button" aria-label="Information">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+    </button>
+
+    <!-- Modal -->
+    <div id="infoModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>About This Timeline</h2>
+            <p>This timeline is generated using large language models. The content is AI-generated and may require verification.</p>
+            <p>Help improve the data by visiting our <a href="https://github.com/generative-ai-timeline/generative-ai-timeline/blob/main/docs/data/timeline.json" target="_blank" rel="noopener noreferrer">GitHub repository</a>.</p>
+            <button id="closeModal" class="close-button">×</button>
+          </div>          
+    </div>
+
     <script src="js/timeline.js"></script>
 </body>
 </html>
