@@ -1,6 +1,11 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
+/* Base scale adjustment */
+html {
+    font-size: 12px; /* 75% of default 16px */
+}
+
 /* Base typography */
 body {
     background-color: white;
@@ -131,7 +136,7 @@ body {
     transform: translateX(-50%);
     font-weight: 500;
     color: #059669; /* emerald-600 to match date label */
-    font-size: 0.875rem;
+    font-size: calc(0.875rem * var(--scale-factor));
     letter-spacing: 0.5px;
 }
 
@@ -173,8 +178,8 @@ body {
 /* Common dot styling */
 .timeline-dot {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 0.833rem; /* 10px / 12 */
+    height: 0.833rem;
     background-color: #059669; /* emerald-600 */
     border-radius: 50%;
     left: 50%;
@@ -195,7 +200,7 @@ body {
 /* Common line styling */
 .timeline-vertical-line {
     position: absolute;
-    width: 2px;
+    width: 0.167rem; /* 2px / 12 */
     background-color: #e5e7eb; /* Changed back to gray */
     left: 50%;
     transform: translateX(-50%);
@@ -216,8 +221,8 @@ body {
 /* Card styling */
 .timeline-item {
     position: absolute;
-    width: 280px;
-    padding: 16px;
+    width: 23.33rem; /* 280px / 12 */
+    padding: 1.33rem; /* 16px / 12 */
     background: white;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -233,14 +238,14 @@ body {
     font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: 0.5px;
-    margin-bottom: 8px;
+    margin-bottom: 0.67rem; /* 8px / 12 */
     text-transform: uppercase;
 }
 
 .event-title {
     font-weight: 600;
     font-size: 1.25rem;
-    margin-bottom: 12px;
+    margin-bottom: 1rem;
     line-height: 1.3;
     color: #1a1a1a;
 }
@@ -287,8 +292,8 @@ body {
     position: fixed;
     bottom: 24px;
     right: 24px;
-    width: 48px;
-    height: 48px;
+    width: 4rem; /* 48px / 12 */
+    height: 4rem;
     border-radius: 50%;
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -374,8 +379,8 @@ body {
     position: fixed;
     top: calc(60px + 132px); /* Header height (60px) + offset from track top */
     left: 40px;
-    width: 40px;
-    height: 40px;
+    width: 3.33rem; /* 40px / 12 */
+    height: 3.33rem;
     border-radius: 8px;
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -399,7 +404,7 @@ body {
 
 /* Model info styling */
 .model-info {
-    margin-bottom: 8px;
+    margin-bottom: 0.67rem;
     font-size: 0.875rem;
     color: #4b5563;
 }
@@ -410,8 +415,8 @@ body {
 }
 
 .model-info .model-name {
-    margin-left: 8px;
-    padding: 2px 6px;
+    margin-left: 0.67rem;
+    padding: 0.167rem 0.5rem;
     background-color: rgba(5, 150, 105, 0.1);
     border-radius: 4px;
     font-family: monospace;
@@ -419,7 +424,7 @@ body {
 
 /* Origin info styling */
 .origin-info {
-    margin-bottom: 8px;
+    margin-bottom: 0.67rem;
     font-size: 0.875rem;
     color: #4b5563;
 }
