@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://generative-ai-timeline.github.io/generative-ai-timeline/sitemap.xml 
