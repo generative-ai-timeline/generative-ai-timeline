@@ -1,0 +1,317 @@
+{
+    "models": [
+      {
+        "track": "Models",
+        "items": [
+          {
+            "date": "2018-06-01",
+            "time": "June 1, 2018",
+            "event": "GPT‑1 Released",
+            "model": "GPT‑1",
+            "provider": "OpenAI",
+            "description": "OpenAI releases GPT‑1, the first generative pre‑trained transformer model that sparked modern LLM research."
+          },
+          {
+            "date": "2019-02-01",
+            "time": "February 1, 2019 (approx.)",
+            "event": "GPT‑2 Released",
+            "model": "GPT‑2",
+            "provider": "OpenAI",
+            "description": "OpenAI announces GPT‑2, a much larger model that demonstrates advanced text generation capabilities and raises public awareness of LLM potential."
+          },
+          {
+            "date": "2020-06-01",
+            "time": "June 1, 2020",
+            "event": "GPT‑3 Released",
+            "model": "GPT‑3",
+            "provider": "OpenAI",
+            "description": "OpenAI launches GPT‑3 (175 billion parameters), demonstrating strong in‑context learning and setting new benchmarks for language models."
+          },
+          {
+            "date": "2022-11-30",
+            "time": "November 30, 2022",
+            "event": "ChatGPT (GPT‑3.5) Launched",
+            "model": "GPT‑3.5",
+            "provider": "OpenAI",
+            "description": "ChatGPT debuts as a free research preview based on GPT‑3.5, rapidly amassing millions of users and popularizing conversational interfaces."
+          },
+          {
+            "date": "2023-03-14",
+            "time": "March 14, 2023",
+            "event": "GPT‑4 Released",
+            "model": "GPT‑4",
+            "provider": "OpenAI",
+            "description": "OpenAI releases GPT‑4, an advanced model with enhanced reasoning and accuracy compared to GPT‑3.5."
+          },
+          {
+            "date": "2023-03-15",
+            "time": "March 15, 2023 (approx.)",
+            "event": "Claude Released",
+            "model": "Claude",
+            "provider": "Anthropic",
+            "description": "Anthropic launches Claude, its conversational AI assistant designed for safer and more steerable interactions."
+          },
+          {
+            "date": "2023-07-01",
+            "time": "July 1, 2023",
+            "event": "Llama 2 Released",
+            "model": "Llama 2",
+            "provider": "Meta",
+            "description": "Meta releases Llama 2 in multiple sizes as an open‑source alternative to proprietary large language models."
+          },
+          {
+            "date": "2023-11-04",
+            "time": "November 4, 2023",
+            "event": "Grok‑1 Released",
+            "model": "Grok‑1",
+            "provider": "xAI",
+            "description": "Elon Musk’s xAI launches Grok‑1, a 314-billion-parameter model integrated with the social platform X (formerly Twitter)."
+          },
+          {
+            "date": "2023-11-07",
+            "time": "November 7, 2023 (approx.)",
+            "event": "GPT‑4 Turbo Released",
+            "model": "GPT‑4 Turbo",
+            "provider": "OpenAI",
+            "description": "OpenAI releases GPT‑4 Turbo, a variant of GPT‑4 with improved throughput, a larger context window, and enhanced efficiency."
+          },
+          {
+            "date": "2024-02-02",
+            "time": "February 2, 2024",
+            "event": "Gemini 1.5 Released",
+            "model": "Gemini 1.5",
+            "provider": "Google DeepMind",
+            "description": "Google DeepMind unveils Gemini 1.5, a multimodal model with a one-million-token context window and advanced retrieval capabilities."
+          },
+          {
+            "date": "2024-04-01",
+            "time": "April 2024 (approx.)",
+            "event": "Gemini Ultra/Flash Variant Released",
+            "model": "Gemini Ultra / Gemini Flash",
+            "provider": "Google DeepMind",
+            "description": "Google DeepMind releases advanced variants of Gemini 1.5 (commonly referred to as Gemini Ultra or Flash), featuring further optimized multimodal performance and faster inference."
+          },
+          {
+            "date": "2024-05-13",
+            "time": "May 13, 2024",
+            "event": "GPT‑4o Released",
+            "model": "GPT‑4o",
+            "provider": "OpenAI",
+            "description": "OpenAI launches GPT‑4o ('Omni'), a multimodal model that processes text, images, audio, and video at twice the speed of GPT‑4 Turbo."
+          },
+          {
+            "date": "2024-06-20",
+            "time": "June 20, 2024",
+            "event": "Claude 3.5 Sonnet Released",
+            "model": "Claude 3.5 Sonnet",
+            "provider": "Anthropic",
+            "description": "Anthropic releases Claude 3.5 Sonnet, featuring a 200,000-token context window and improved performance in coding and reasoning tasks."
+          },
+          {
+            "date": "2024-06-23",
+            "time": "June 23, 2024",
+            "event": "Llama 3.1 Released",
+            "model": "Llama 3.1",
+            "provider": "Meta",
+            "description": "Meta releases Llama 3.1, an advanced version with 405 billion parameters, an expanded context window, and enhanced multilingual support."
+          },
+          {
+            "date": "2024-07-18",
+            "time": "July 18, 2024",
+            "event": "GPT‑4o mini Released",
+            "model": "GPT‑4o mini",
+            "provider": "OpenAI",
+            "description": "OpenAI releases GPT‑4o mini, a smaller, faster, and more cost-efficient variant that replaces GPT‑3.5 in ChatGPT’s interface."
+          },
+          {
+            "date": "2024-08-14",
+            "time": "August 14, 2024",
+            "event": "Grok‑2 Released",
+            "model": "Grok‑2",
+            "provider": "xAI",
+            "description": "xAI launches Grok‑2, refining Grok‑1’s performance and efficiency, available to premium subscribers on X."
+          },
+          {
+            "date": "2024-09-15",
+            "time": "September 15, 2024 (approx.)",
+            "event": "o1‑preview Released",
+            "model": "o1-preview",
+            "provider": "OpenAI",
+            "description": "OpenAI releases a preview of o1, a model using chain-of-thought prompting for deeper reasoning on complex tasks."
+          },
+          {
+            "date": "2024-12-05",
+            "time": "December 5, 2024",
+            "event": "o1 Full Release",
+            "model": "o1",
+            "provider": "OpenAI",
+            "description": "OpenAI launches the full o1 model, excelling in scientific, coding, and math tasks, available to premium ChatGPT users."
+          },
+          {
+            "date": "2025-01-20",
+            "time": "January 20, 2025",
+            "event": "DeepSeek R1 Released",
+            "model": "DeepSeek R1",
+            "provider": "DeepSeek",
+            "description": "DeepSeek releases its R1 model (671B total parameters, 37B active per input) for advanced math, coding, and logical reasoning at a lower cost."
+          },
+          {
+            "date": "2025-01-31",
+            "time": "January 31, 2025",
+            "event": "o3‑mini Released",
+            "model": "o3-mini",
+            "provider": "OpenAI",
+            "description": "OpenAI launches o3-mini, a successor to o1-mini with advanced reasoning capabilities in a compact form."
+          },
+          {
+            "date": "2025-02-17",
+            "time": "February 17, 2025 (approx.)",
+            "event": "Grok‑3 Released",
+            "model": "Grok‑3",
+            "provider": "xAI",
+            "description": "xAI launches Grok‑3, touted as 'the smartest AI on earth,' representing the next major upgrade in the Grok series."
+          }
+        ]            
+      }
+    ],
+    "concepts": [
+      {
+        "track": "Concepts & Technology",
+        "items": [
+          {
+            "date": "2018-01-01",
+            "time": "Early 2018 (approx.)",
+            "event": "Knowledge Distillation & Model Compression",
+            "origin": "Academic / Industry (e.g., Hugging Face)",
+            "description": "Techniques for compressing large transformer models into smaller, efficient variants (e.g., DistilBERT) are popularized, enabling faster inference and reducing resource consumption."
+          },
+          {
+            "date": "2018-01-01",
+            "time": "Early 2018 (approx.)",
+            "event": "Scaling Laws and Emergent Abilities",
+            "origin": "Academic (Kaplan et al.)",
+            "description": "Research demonstrates that increasing model size, data, and compute leads to emergent capabilities—guiding the design of modern large language models."
+          },
+          {
+            "date": "2020-06-01",
+            "time": "June 1, 2020",
+            "event": "In-Context Learning Demonstrated",
+            "origin": "OpenAI",
+            "description": "GPT‑3 shows that models can perform tasks by conditioning on examples provided within the prompt, revolutionizing the way LLMs are utilized."
+          },
+          {
+            "date": "2020-06-01",
+            "time": "June 2020 (approx.)",
+            "event": "Reinforcement Learning from Human Feedback (RLHF) Introduced",
+            "origin": "OpenAI / Research Community",
+            "description": "RLHF is applied to fine-tune models (e.g., InstructGPT), significantly improving alignment with human expectations and reducing undesirable outputs."
+          },
+          {
+            "date": "2020-10-08",
+            "time": "October 8, 2020 (approx.)",
+            "event": "Retrieval-Augmented Generation (RAG) Concept Introduced",
+            "origin": "Facebook AI Research",
+            "description": "The RAG approach is proposed to augment language model outputs by retrieving relevant external documents at inference time, thereby enhancing factual accuracy."
+          },
+          {
+            "date": "2021-01-01",
+            "time": "Early 2021 (approx.)",
+            "event": "Prompt Engineering Emerges",
+            "origin": "Developer Community / Research",
+            "description": "Developers quickly discover that carefully crafting prompts can greatly influence LLM outputs, establishing prompt engineering as a critical practice."
+          },
+          {
+            "date": "2021-01-01",
+            "time": "January 2021 (approx.)",
+            "event": "CLIP Introduced for Multimodal Representations",
+            "origin": "OpenAI",
+            "description": "CLIP is introduced to learn joint representations for images and text, paving the way for robust multimodal applications."
+          },
+          {
+            "date": "2022-01-01",
+            "time": "January 2022 (approx.)",
+            "event": "Chain-of-Thought Prompting Emerges",
+            "origin": "Academic/Research (Wei et al.)",
+            "description": "Models are shown to benefit from generating intermediate reasoning steps (chain-of-thought), which significantly improves performance on complex tasks."
+          },
+          {
+            "date": "2022-08-22",
+            "time": "August 22, 2022 (approx.)",
+            "event": "Stable Diffusion Released",
+            "origin": "Stability AI, LAION, EleutherAI",
+            "description": "Stable Diffusion, an open-source text-to-image model, democratizes high-quality image generation and accelerates multimodal AI applications."
+          },
+          {
+            "date": "2023-03-14",
+            "time": "March 14, 2023 (approx.)",
+            "event": "Function Calling & API-Based Tool Use Introduced",
+            "origin": "OpenAI",
+            "description": "With the release of GPT‑4, OpenAI introduces built-in function calling, enabling models to interact with external APIs and tools via structured, JSON-formatted calls."
+          },
+          {
+            "date": "2023-03-15",
+            "time": "March 15, 2023 (approx.)",
+            "event": "Autonomous Agents & Multi-Step Tool Use Emerge",
+            "origin": "Developer Community (AutoGPT, BabyAGI, LangChain)",
+            "description": "Projects like AutoGPT and BabyAGI demonstrate that LLMs can autonomously plan and execute multi-step tasks, laying the foundation for agentic workflows and complex tool integration."
+          },
+          {
+            "date": "2023-07-15",
+            "time": "July 15, 2023 (approx.)",
+            "event": "LangGraph Concept Introduced",
+            "origin": "Developer Community / Open-Source Ecosystem",
+            "description": "LangGraph emerges as a visual, graph-structured framework that enables developers to design, orchestrate, and debug complex LLM pipelines with ease."
+          },
+          {
+            "date": "2024-02-02",
+            "time": "February 2024 (approx.)",
+            "event": "Distillation and Model Compression Advanced",
+            "origin": "Multiple (OpenAI, Hugging Face, Google)",
+            "description": "Further advancements in model distillation and compression techniques enable even larger models to be deployed in resource-constrained settings while retaining performance."
+          },
+          {
+            "date": "2024-08-01",
+            "time": "August 2024 (approx.)",
+            "event": "Enhanced RAG with Integrated Reranking and Web Search",
+            "origin": "Multiple (Cohere, Google, Elastic)",
+            "description": "New RAG pipelines integrate second-stage reranking and web-search connectors to refine retrieval quality, improving the accuracy and factual grounding of generated responses."
+          },
+          {
+            "date": "2024-09-01",
+            "time": "September 2024 (approx.)",
+            "event": "Structured Outputs for Tool Calling Introduced",
+            "origin": "Cohere",
+            "description": "APIs from Cohere and others start supporting structured output formats (e.g., strict JSON) for tool calls and inline citations, ensuring greater reliability in multi-step RAG pipelines."
+          },
+          {
+            "date": "2024-09-01",
+            "time": "September 2024 (approx.)",
+            "event": "Multi-Step Tool Use and Function Calling Integrated",
+            "origin": "OpenAI",
+            "description": "New models like OpenAI's o1 incorporate multi-step function calling, enabling the LLM to decide dynamically when to invoke external tools for enhanced problem solving."
+          },
+          {
+            "date": "2024-09-16",
+            "time": "September 16, 2024 (approx.)",
+            "event": "Advanced Reranking Improves RAG Search",
+            "origin": "Cohere / AWS",
+            "description": "The release of Cohere Rerank 3 introduces advanced reranking techniques that re-order retrieved documents by relevance, substantially boosting the precision of RAG systems."
+          },
+          {
+            "date": "2024-12-16",
+            "time": "December 16, 2024",
+            "event": "Agentic RAG with Dynamic Knowledge Base Selection Demonstrated",
+            "origin": "Elastic / LangChain",
+            "description": "A demonstration showcases an agentic RAG system that leverages Elasticsearch as a dynamic knowledge base, combined with LangChain orchestration, allowing the LLM to choose among multiple tools based on real-time context."
+          },
+          {
+            "date": "2025-02-17",
+            "time": "February 17, 2025 (approx.)",
+            "event": "Multi-Agent RAG Workflows Explored",
+            "origin": "Research / Developer Community",
+            "description": "Research and early prototypes explore federated multi-agent RAG workflows, where multiple agents collaborate—each accessing different knowledge sources—to address complex, multi-faceted queries."
+          }
+        ]
+      }
+    ]
+  } 

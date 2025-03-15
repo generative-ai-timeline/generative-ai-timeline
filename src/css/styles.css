@@ -1,0 +1,140 @@
+.timeline-container {
+    position: relative;
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    height: 600px;
+}
+
+.timeline-scroll-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+}
+
+.timeline-content {
+    position: relative;
+    min-width: max-content;
+    padding: 0 200px;
+}
+
+/* Timeline base */
+.timeline-center-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    height: 1px;
+    background-color: #e5e7eb;
+}
+
+/* Year labels */
+.timeline-years {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+}
+
+.year-marker {
+    position: absolute;
+    transform: translateX(-50%);
+    color: #6b7280;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Event items */
+.timeline-item-container {
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+/* The blue dot */
+.timeline-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    left: 50%;
+    top: 37px; /* Align with timeline */
+    transform: translateX(-50%);
+}
+
+/* Vertical line */
+.timeline-vertical-line {
+    position: absolute;
+    width: 1px;
+    background-color: #e5e7eb;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 44px; /* Start below dot */
+}
+
+/* Card styling */
+.timeline-item {
+    position: absolute;
+    width: 280px;
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Position cards in alternating rows below timeline */
+.models-item {
+    top: 80px; /* First row */
+}
+
+.models-item + .timeline-vertical-line {
+    height: 40px;
+}
+
+.concepts-item {
+    top: 240px; /* Second row */
+}
+
+.concepts-item + .timeline-vertical-line {
+    height: 200px;
+}
+
+/* Card content */
+.date-label {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+}
+
+.event-title {
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #4b5563;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    max-height: 4.2em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Hover effect */
+.timeline-item:hover {
+    transform: translateX(-50%) scale(1.02);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 250px;
+    }
+}
